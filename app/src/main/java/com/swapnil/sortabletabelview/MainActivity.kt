@@ -12,8 +12,11 @@ import de.codecrafters.tableview.toolkit.SimpleTableHeaderAdapter
 class MainActivity : AppCompatActivity() {
 
     lateinit var tableView: TableView<Array<String>>
-//    val tableHeader = arrayOf("ID", "Name", "Email", "Phone No.")
     val tableData: Array<Array<String>> = arrayOf(
+        arrayOf("Store A", "0.0", "60.51", "1.2", "22", "-22.00", "Test", "All", "14.25%", "25.56%", "50.56%", "65.52%"),
+        arrayOf("Store A", "0.0", "60.51", "1.2", "22", "-22.00", "Test", "All", "14.25%", "25.56%", "50.56%", "65.52%"),
+        arrayOf("Store A", "0.0", "60.51", "1.2", "22", "-22.00", "Test", "All", "14.25%", "25.56%", "50.56%", "65.52%"),
+        arrayOf("Store A", "0.0", "60.51", "1.2", "22", "-22.00", "Test", "All", "14.25%", "25.56%", "50.56%", "65.52%"),
         arrayOf("Store A", "0.0", "60.51", "1.2", "22", "-22.00", "Test", "All", "14.25%", "25.56%", "50.56%", "65.52%"),
         arrayOf("Store A", "0.0", "60.51", "1.2", "22", "-22.00", "Test", "All", "14.25%", "25.56%", "50.56%", "65.52%"),
         arrayOf("Store A", "0.0", "60.51", "1.2", "22", "-22.00", "Test", "All", "14.25%", "25.56%", "50.56%", "65.52%"),
@@ -28,12 +31,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//
-//        var emptyTable = findViewById(R.id.emptyTableView) as TableView<Array<String>>
-//        var emptyTableHeaderAdapter = SimpleTableHeaderAdapter(this, "", "Share", "SF Health")
-//        emptyTableHeaderAdapter.setTextColor(getColor(R.color.white))
-//        emptyTableHeaderAdapter.setTextSize(12)
-//        emptyTable.headerAdapter = emptyTableHeaderAdapter
 
         tableView = findViewById(R.id.tableView)
         tableView.setColumnCount(12);
@@ -49,6 +46,5 @@ class MainActivity : AppCompatActivity() {
         simpleTableDataAdapter.setGravity(Gravity.CENTER_HORIZONTAL)
         simpleTableDataAdapter.setTextColor(getColor(R.color.smokeBlack))
         tableView.dataAdapter = simpleTableDataAdapter
-//        tableView.headerAdapter = SimpleTableHeaderAdapter(this, TABLE_HEADERS)
     }
 }

@@ -17,23 +17,19 @@
         android:weightSum="12"
         android:layout_marginHorizontal="10dp">
         <TextView
+            android:id="@+id/txtShare"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:padding="5dp"
-            android:background="@color/colorPrimaryDark"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="5"
+            android:layout_weight="6"
             android:layout_height="match_parent"
             android:text="Share"
-            android:textSize="12sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             android:padding="5dp"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:background="@color/colorPrimaryDark"/>
         <TextView
+            android:id="@+id/txtSF"
             android:layout_width="0dp"
             android:layout_weight="6"
             android:layout_height="match_parent"
@@ -43,18 +39,31 @@
             android:padding="5dp"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:background="@color/colorPrimaryDark"/>
+            android:background="@color/navTable"/>
     </LinearLayout>
 
     <de.codecrafters.tableview.TableView
-        android:id="@+id/tableView"
+        android:id="@+id/shareTableView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="10dp"
         android:layout_marginBottom="10dp"
         table:tableView_headerElevation="10"
         android:background="#DFDFDF"
-        app:tableView_columnCount="12"
+        app:tableView_columnCount="6"
+        android:visibility="visible"
+        table:tableView_headerColor="@color/colorPrimary" />
+
+    <de.codecrafters.tableview.TableView
+        android:id="@+id/sfTableView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="10dp"
+        table:tableView_headerElevation="10"
+        android:background="#DFDFDF"
+        app:tableView_columnCount="7"
+        android:visibility="gone"
         table:tableView_headerColor="@color/colorPrimary" />
 
 </LinearLayout>
